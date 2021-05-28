@@ -6,4 +6,6 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface UserDao {
     void insert(User user);
+
+    User findByToken(String token);
 }

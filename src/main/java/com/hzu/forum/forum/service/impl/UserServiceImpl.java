@@ -14,6 +14,11 @@ public class UserServiceImpl implements UserService {
     UserDao userDao;
 
     @Override
+    public User findByToken(String token) {
+        return userDao.findByToken(token);
+    }
+
+    @Override
     public void insert(User user) {
         userDao.insert(user);
     }

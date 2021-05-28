@@ -12,4 +12,11 @@
         (#{id},#{accountId},#{name},#{token},#{gmtCreate},#{gmtModified})
     </insert>
 
+    <!--查 -->
+    <select id="findByToken" resultMap="userMap">
+        SELECT * FROM
+        <include refid="user"/>
+        WHERE
+        token = #{token}
+    </select>
 </mapper>
