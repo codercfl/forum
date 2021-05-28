@@ -1,16 +1,16 @@
 package com.hzu.forum.forum.dto;
 
 public class GithubUser {
-    private String login;
+    private String name;
     private long id;
     private String bio;
 
-    public String getLogin() {
-        return login;
+    public String getName() {
+        return name;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public long getId() {
@@ -27,5 +27,14 @@ public class GithubUser {
 
     public void setBio(String bio) {
         this.bio = bio;
+    }
+
+    @Override
+    public String toString() {
+        return "GithubUser{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                ", bio='" + bio + '\'' +
+                '}';
     }
 }
