@@ -7,6 +7,7 @@ import okhttp3.*;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.net.SocketOption;
 
 
 @Component
@@ -45,6 +46,11 @@ public class GithubProvider {
             String string = response.body().string();
             GithubUser githubUser = JSON.parseObject(string, GithubUser.class);
             System.out.println(string);
+            if (githubUser.getId() == 0){
+                System.out.println("失败了");
+                return null;
+            }
+            System.out.println("成功了");
             return githubUser;
         } catch (IOException e) {
             e.printStackTrace();

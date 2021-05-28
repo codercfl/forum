@@ -2,8 +2,9 @@ package com.hzu.forum.forum.dto;
 
 public class GithubUser {
     private String name;
-    private long id;
+    private Long id;
     private String bio;
+
 
     public String getName() {
         return name;
